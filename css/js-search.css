@@ -65,6 +65,7 @@ div#jss-search {
 }
 .jss-search-result .title {
     /*font-weight: bold;*/
+    font-size: initial;
 }
 .jss-search-result .group {
     opacity: 0.5;

@@ -14,21 +14,32 @@
 
     <!-- simple styles for the demo -->
     <style type="text/css">
+        body {
+            color: #333;
+            background-color: #efefef;
+            font: 13px helvetica,arial,freesans,clean,sans-serif;
+        }
+        #demo {
+            width: 80%;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 20px;
+
+            background-color: #F8F8F8;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px #999;
+            line-height: 1.4em;
+            font: 13px helvetica,arial,freesans,clean,sans-serif;
+            color: black;
+        }
+
         .ss360-logo {
             width: 120px;
             margin-top: 0;
             margin-bottom: 0;
         }
-        #header, #main, #head, #search, footer {
-            display: block;
-            padding: 20px;
-            width: 80%;
-            max-width: 1000px;
-            margin-left: auto;
-            margin-right: auto;
-            background-color: #fff;
-        }
-
+       
         #head p:first-child {
             margin-top: 0;
         }
@@ -51,11 +62,6 @@
 
         .search input#searchBox {
             margin-top: 0;
-        }
-
-        body {
-            background-color: #efefef;
-            font-family: Arial, serif;
         }
 
         #triggerBox {
@@ -91,12 +97,10 @@
 </head>
 <body>
 
-<!-- the header content of your page-->
-<header id="header">
-    <h1>JavaScript Search — Serverless Superfast Search</h1>
-    <br>
-</header>
-<section role="region" id="head">
+<div id="demo">
+  <h1>JavaScript Search — Serverless Superfast Search</h1>
+  
+  <section role="region" id="head">
     <p class="jss-doc" jss-title="Document 1" jss-group="Blog" jss-meta="This article explains the blog content." jss-event="alert(1)">Behold he. Creeping. Fifth of a meat. Divided fill may earth one rule lesser, bearing itself one seas his grass Waters was they're. Moveth. You're years whales the earth i female. Living that moveth. Were firmament deep living was first you'll gathering fifth make winged. Which, seas yielding image day make spirit living him god abundantly bring may female she'd saw moving their let day. Beast, us she'd she'd wherein under fifth creeping kind moved winged divided fowl hath, is moving herb dominion fill.</p>
 
     <p class="jss-doc" jss-title="Document 2" jss-group="Products" jss-event="alert(2)">Great called, created greater the waters sixth bearing. Forth won't to created abundantly sixth divide image us sixth grass night, you'll give seed given set life fourth. Make cattle beginning. Beginning together under created likeness thing living i shall saw darkness Above midst of and behold so heaven without rule You'll called midst which light a. Living upon us fruitful form man was, herb and god You him night deep abundantly dominion there place great us life given replenish without greater, hath. Fill. Male dominion. Air us had. Gathering years. Moved after yielding bring over. Had moveth divided i fish may seed thing god life multiply isn't, also.</p>
@@ -129,6 +133,8 @@
         <img src="https://cdn.sitesearch360.com/ss360-logo.svg" role="logo" class="ss360-logo">
     </a>
 </footer>
+
+</div>
 
 <script src="../js/js-search.js"></script>
 <script>
