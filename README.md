@@ -4,6 +4,7 @@ Javascript Search - Serverless Superfast Search
 A super fast search for one-pager with a lot of information, for example api documentations. The script is licensed under MIT, dependency free, and supported by the team at [Site Search 360](https://www.sitesearch360.com).
 
 Try it yourself using the [demo](https://htmlpreview.github.io/?https://github.com/ddsky/javascript-search/blob/master/html/example.html)
+
 ![Javascript Search in action](media/js-search.gif "Javascript Search in action")
 
 ## Install
