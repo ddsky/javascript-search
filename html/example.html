@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+    <title>JavaScript Search - Serverless Superfast Search</title>
+    <link rel="icon" href="./SS3_favicon-blue.png">
+    <link rel="apple-touch-icon" href="//cdn2.hubspot.net/hubfs/218977/Website/Global/SS3_favicon-white.png">
+
+    <!-- These two resources are just for highlighting the code, you do NOT need them for SS360. -->
+    <link href="https://control.sitesearch360.com/assets/admin/layout2/css/prism.min.css" rel="stylesheet" type="text/css"/>
+    <script src="https://control.sitesearch360.com/assets/admin/layout2/scripts/prism.min.js" type="text/javascript"></script>
+    <link href="../css/js-search.css" rel="stylesheet" type="text/css"/>
+
+    <!-- simple styles for the demo -->
+    <style type="text/css">
+        .ss360-logo {
+            width: 120px;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+        #header, #main, #head, #search, footer {
+            display: block;
+            padding: 20px;
+            width: 80%;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: #fff;
+        }
+
+        #head p:first-child {
+            margin-top: 0;
+        }
+
+        #main, #search {
+            padding-top: 0;
+        }
+
+        #search input {
+            margin-bottom: 20px;
+        }
+
+        #head, #header {
+            line-height: 25px;
+        }
+
+        #header {
+            padding-bottom: 0;
+        }
+
+        .search input#searchBox {
+            margin-top: 0;
+        }
+
+        body {
+            background-color: #efefef;
+            font-family: Arial, serif;
+        }
+
+        #triggerBox {
+            width: calc(100% - 56px);
+            height: 32px;
+            padding: 10px;
+            padding-left: 44px;
+            border-radius: 5px;
+            outline: none;
+            font-size: 16px;
+            font-family: 'Open Sans', sans-serif;
+            box-shadow: 0 5px 10px rgba(#333, 0.1);
+            border: 1px solid #d4d4d4;
+            background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjAiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgNTAgNTAiIGZpbGw9IiM2NjY2NjYiID48ZyBpZD0ic3VyZmFjZTEiPjxwYXRoIHN0eWxlPSIgIiBkPSJNIDIxIDMgQyAxMS42MDE1NjMgMyA0IDEwLjYwMTU2MyA0IDIwIEMgNCAyOS4zOTg0MzggMTEuNjAxNTYzIDM3IDIxIDM3IEMgMjQuMzU1NDY5IDM3IDI3LjQ2MDkzOCAzNi4wMTU2MjUgMzAuMDkzNzUgMzQuMzQzNzUgTCA0Mi4zNzUgNDYuNjI1IEwgNDYuNjI1IDQyLjM3NSBMIDM0LjUgMzAuMjgxMjUgQyAzNi42Nzk2ODggMjcuNDIxODc1IDM4IDIzLjg3ODkwNiAzOCAyMCBDIDM4IDEwLjYwMTU2MyAzMC4zOTg0MzggMyAyMSAzIFogTSAyMSA3IEMgMjguMTk5MjE5IDcgMzQgMTIuODAwNzgxIDM0IDIwIEMgMzQgMjcuMTk5MjE5IDI4LjE5OTIxOSAzMyAyMSAzMyBDIDEzLjgwMDc4MSAzMyA4IDI3LjE5OTIxOSA4IDIwIEMgOCAxMi44MDA3ODEgMTMuODAwNzgxIDcgMjEgNyBaICI+PC9wYXRoPjwvZz48L3N2Zz4=') no-repeat 8px 10px;
+            background-size: 24px 32px;
+            transition: 0.25s;
+        }
+
+        h1 {
+            line-height: 1.2em;
+        }
+
+        .jss-doc {
+            display: none;
+        }
+
+        footer {
+            font-size: 0.8em;
+            text-align: center;
+        }
+    </style>
+
+</head>
+<body>
+
+<!-- the header content of your page-->
+<header id="header">
+    <h1>JavaScript Search — Serverless Superfast Search</h1>
+    <br>
+</header>
+<section role="region" id="head">
+    <p class="jss-doc" jss-title="Document 1" jss-group="Blog" jss-meta="This article explains the blog content." jss-event="alert(1)">Behold he. Creeping. Fifth of a meat. Divided fill may earth one rule lesser, bearing itself one seas his grass Waters was they're. Moveth. You're years whales the earth i female. Living that moveth. Were firmament deep living was first you'll gathering fifth make winged. Which, seas yielding image day make spirit living him god abundantly bring may female she'd saw moving their let day. Beast, us she'd she'd wherein under fifth creeping kind moved winged divided fowl hath, is moving herb dominion fill.</p>
+
+    <p class="jss-doc" jss-title="Document 2" jss-group="Products" jss-event="alert(2)">Great called, created greater the waters sixth bearing. Forth won't to created abundantly sixth divide image us sixth grass night, you'll give seed given set life fourth. Make cattle beginning. Beginning together under created likeness thing living i shall saw darkness Above midst of and behold so heaven without rule You'll called midst which light a. Living upon us fruitful form man was, herb and god You him night deep abundantly dominion there place great us life given replenish without greater, hath. Fill. Male dominion. Air us had. Gathering years. Moved after yielding bring over. Had moveth divided i fish may seed thing god life multiply isn't, also.</p>
+
+    <p class="jss-doc" jss-title="Document 3" jss-group="Widgets" jss-event="alert(3)">Living morning us moveth whales saw over bearing sea don't, seasons was third you're had hath lights from upon can't. Every was. Give the, him thing dominion fill winged given midst all they're form second creepeth void to doesn't, good saw female divided multiply seas had likeness. Be greater winged moved hath, signs bearing, fruit. Yielding. Meat. Multiply living stars creeping give so. Likeness gathering. Give.</p>
+
+    <p class="jss-doc" jss-title="Document 4" jss-group="Misc" jss-event="alert(4)">Behold life kind own yielding us morning beginning very creature were in were created without open dry seed together brought void bearing you let great seas creature darkness. Them void you i forth. Also god air were likeness likeness also thing fourth bearing be wherein there to. Winged him after them. Greater gathering our from which midst from created. One his i said. Place divide she'd beast you're. Days in it fowl creepeth be rule can't lights saying kind were open had wherein wherein night meat us First were moving under moved great, blessed spirit.</p>
+
+    <p class="jss-doc" jss-title="Document 5" jss-group="Entertainment" jss-event="alert(5)">Blessed their shall thing deep second sixth make second give. To multiply moving a fourth cattle that created. Lesser brought bearing so which, days Saw. Saw. Earth stars itself. After creepeth fruit fly morning place us great lights cattle our make blessed. Greater years so moving seas fifth replenish dry creeping fruit waters abundantly is bearing. Green sixth he, god said. Good. Which they're. Grass. Life lights male don't abundantly. Stars.</p>
+
+    <p class="jss-doc" jss-title="Document 6" jss-group="All" jss-event="alert(6)">Darkness greater male he, divide green I upon set. One us lesser grass let rule is saying, unto place open replenish fly all. There you'll. Gathering won't sixth and. Over yielding spirit his wherein deep. First were. Lights Years seas called fowl give were forth waters moveth us appear divided fill whales and man may all. Evening have. Moved beast there was upon won't. Make, she'd green multiply in he moved life called kind you'll morning was winged make beginning gathered you also. Don't multiply rule you're.</p>
+
+    <p class="jss-doc" jss-title="Document 7" jss-group="Blog" jss-event="alert(7)">To grass fifth open a of air all form had beginning beast, called subdue fowl moveth fruit wherein from there Fifth grass it said multiply. Said night herb morning was stars stars beast void created night their itself spirit light called that called created yielding given upon sixth winged gathered days itself sixth lesser for don't. Very beginning. You're midst. Tree midst beginning firmament whose stars night. Also of god. Be is dominion signs Face isn't darkness. Whales Replenish, whose all lights void greater he hath days without him creepeth female Female you'll so midst won't fly to great so gathering waters make male light the. Saying good.</p>
+
+    <p class="jss-doc" jss-title="Document 8" jss-event="alert(8)">There may cattle whose Seas one let a for dominion moved day subdue he was moving dominion fly over moved she'd. Given blessed darkness and living seas, saying above fourth lesser grass form spirit, hath moved day can't living deep shall. That light, fly dry, his seasons divide gathered place multiply let moveth creature. Don't fowl. First set good you're third replenish all. Night cattle sixth shall great. Was rule great he is. Make first. Meat and gathering fill. Two fifth multiply very midst dry two may void forth forth fifth all very which sixth, shall, living, behold he his a yielding face bring their own earth, void earth.</p>
+
+    <p class="jss-doc" jss-title="Document 9" jss-event="alert(9)">Kind i. Give man the, great without moved seas that sixth form have won't that isn't day fill cattle the second light midst first, two he male given she'd. Of in years Meat fifth thing so seasons fill bearing, cattle of is seas third fruit. Midst given the beginning sea let him be fruitful creepeth moving waters our. Fish had Moved all living divide years life. Can't subdue. Grass man set seas creeping fly void earth so, saw first gathering can't were land gathered together. Waters place lights. Saying he sixth light it bearing were blessed gathering wherein fifth he brought subdue. Is forth hath there midst creepeth abundantly itself void after itself.</p>
+
+    <p class="jss-doc" jss-title="Document 10" jss-event="alert(10)">Their. Fourth heaven together i. Every spirit made bring have female saying was you also. Their unto female seed replenish divided signs be from. Rule heaven fowl whose god waters very creeping own upon. Creature dry creeping spirit from the. Is beginning lesser given. Wherein. Make so own spirit. Rule life great is waters shall place divided image dominion bearing dry was. You're air years, two gathered. Deep. Thing upon. Is for. Let isn't land itself was. I fowl upon may years beginning spirit Midst good beginning all don't kind them days. Created after great sea set form divide give years over. Have seas also winged which and land beast. Fish likeness, stars god was earth moveth You wherein, male have light life give signs. Give kind abundantly heaven created said in great meat living had seasons. Green behold beginning. That void shall male won't likeness fill female evening divided to evening saw hath divided. Cattle you'll there earth.</p>
+</section>
+
+<!-- the input field, the id must be placed in the setting "searchBoxSelector" at the bottom of the page -->
+<section id="search" role="search" class="search">
+    <input id="triggerBox" type="text" placeholder="Click here or press Ctrl+F"/>
+</section>
+
+<footer>
+    <p>A project by</p>
+    <a href="https://www.sitesearch360.com" aria-label="Site Search 360">
+        <img src="https://cdn.sitesearch360.com/ss360-logo.svg" role="logo" class="ss360-logo">
+    </a>
+</footer>
+
+<script src="../js/js-search.js"></script>
+<script>
+    JsSearch.init('triggerBox', {
+        placeholder: 'search, e.g. document'
+    });
+    JsSearch.enableShortcuts();
+</script>
+</body>
+
