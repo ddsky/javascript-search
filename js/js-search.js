@@ -5,7 +5,8 @@
  * @see https://github.com/ddsky/javascript-search
  */
 var JsSearch = function JsSearch() {
-    var index = {};
+    var titleIndex = {};
+    var contentIndex = {};
     var documents = {};
     var selectedIndex = 0;
     var selectedDocument = undefined;
@@ -228,10 +229,10 @@ var JsSearch = function JsSearch() {
                     var ngrams = calculateAllEdgeCharNgrams(word, 1, 12);
 
                     ngrams.forEach(function (ngram) {
-                        var docIds = index[ngram];
+                        var docIds = titleIndex[ngram];
                         if (!docIds) {
                             docIds = new Set();
-                            index[ngram] = docIds;
+                            titleIndex[ngram] = docIds;
                         }
                         docIds.add(id);
                     });
@@ -242,10 +243,10 @@ var JsSearch = function JsSearch() {
                 for (j = 0; j < words.length; j++) {
                     word = words[j].toLowerCase();
 
-                    var docIds = index[word];
+                    var docIds = contentIndex[word];
                     if (!docIds) {
                         docIds = new Set();
-                        index[word] = docIds;
+                        contentIndex[word] = docIds;
                     }
                     docIds.add(id);
                 }
@@ -259,14 +260,28 @@ var JsSearch = function JsSearch() {
             var tsStart = new Date().getTime();
             var parts = query.toLowerCase().split(' ');
             var idsFound = undefined;
+
+            // search title index first
             for (var i = 0; i < parts.length; i++) {
-                var tempIds = index[parts[i]];
+                var tempIds = titleIndex[parts[i]];
 
                 if (idsFound === undefined) {
                     idsFound = tempIds;
                 } else if (tempIds !== undefined) {
-                    // idsFound = idsFound.filter(v => tempIds.includes(v));
                     idsFound = intersection(idsFound, tempIds);
+                }
+            }
+
+            // if nothing found in titles, search in content
+            if (idsFound === undefined || idsFound.length === 0) {
+                for (var i = 0; i < parts.length; i++) {
+                    var tempIds = contentIndex[parts[i]];
+    
+                    if (idsFound === undefined) {
+                        idsFound = tempIds;
+                    } else if (tempIds !== undefined) {
+                        idsFound = intersection(idsFound, tempIds);
+                    }
                 }
             }
 
