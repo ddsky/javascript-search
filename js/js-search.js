@@ -295,6 +295,9 @@ var JsSearch = function JsSearch() {
                     showSearchLayer();
                 }
             };
+        },
+        close: function() {
+           hideSearchLayer();
         }
     }
 }();
