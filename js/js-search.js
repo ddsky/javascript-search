@@ -15,7 +15,6 @@ var JsSearch = function JsSearch() {
         document.getElementById('jss-search').style.display = 'block';
         document.getElementById('jss-search-layer').style.display = 'block';
         document.getElementById('jss-search-box').focus();
-
     }
 
     function hideSearchLayer() {
@@ -64,7 +63,7 @@ var JsSearch = function JsSearch() {
         }
         var selectedDomElement = document.getElementsByClassName('jss-search-result').item(selectedIndex);
         selectedDomElement.className = 'jss-search-result active';
-        selectedDomElement.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
+        selectedDomElement.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
     }
 
     function intersection(setA, setB) {
@@ -177,6 +176,7 @@ var JsSearch = function JsSearch() {
             var self = this;
             document.getElementById('jss-search-layer').onclick = hideSearchLayer;
             document.getElementById(triggerSearchBoxId).onfocus = showSearchLayer;
+
             document.getElementById('jss-search-box').onkeyup = function (event) {
                 if (event.keyCode === 27) {
                     hideSearchLayer();
@@ -276,7 +276,7 @@ var JsSearch = function JsSearch() {
             if (idsFound === undefined || idsFound.length === 0) {
                 for (var i = 0; i < parts.length; i++) {
                     var tempIds = contentIndex[parts[i]];
-    
+
                     if (idsFound === undefined) {
                         idsFound = tempIds;
                     } else if (tempIds !== undefined) {
@@ -296,8 +296,11 @@ var JsSearch = function JsSearch() {
                 }
             };
         },
-        close: function() {
-           hideSearchLayer();
+        open: function () {
+            showSearchLayer();
+        },
+        close: function () {
+            hideSearchLayer();
         }
     }
 }();
