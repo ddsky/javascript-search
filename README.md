@@ -5,6 +5,9 @@ A super fast search for one-pager with a lot of information, for example api doc
 
 Try it yourself using the [demo](https://htmlpreview.github.io/?https://github.com/ddsky/javascript-search/blob/master/html/example.html)
 
+## In the wild
+The JS Search is used in API documentations for the [spoonacular meal planning API](https://spoonacular.com/food-api/docs) and the [Joke API](https://humorapi.com/docs/).
+
 ![Javascript Search in action](media/js-search.gif "Javascript Search in action")
 
 ## Install
